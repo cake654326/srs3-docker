@@ -56,8 +56,10 @@ RUN mkdir /root/logs/mse_log
 
 # Add configuration file
 ADD srsconfig.conf /root/sample_conf
+ADD srsedge.conf /root/sample_conf
 RUN cd /root/software/srs/trunk/conf && cp srs.conf srs.conf.bak && rm -rf srs.conf
-RUN cd /root/software/srs/trunk/conf && cp /root/sample_conf/srsconfig.conf . 
+RUN cd /root/software/srs/trunk/conf && cp /root/sample_conf/srsconfig.conf .
+RUN cd /root/software/srs/trunk/conf && cp /root/sample_conf/srsedge.conf . 
 RUN cd /root/software/srs/trunk/conf && cp /root/sample_conf/srsconfig.conf srs.conf
 RUN cd /root/software/go-oryx/conf && cp srs.conf srs.conf.bak && rm -rf srs.conf 
 RUN cd /root/software/go-oryx/conf && cp bms.conf srs.conf
