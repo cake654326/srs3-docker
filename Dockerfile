@@ -79,8 +79,13 @@ ADD start_go-oryx.sh /root/shell
 RUN chmod 777 /root/shell/start_go-oryx.sh
 ADD stop.sh /root/shell
 RUN chmod 777 /root/shell/stop.sh
+ADD srs_edge.sh /root/shell
+RUN chmod 777 /root/shell/srs_edge.sh
+ADD start_srs_edge.sh /root/shell
+RUN chmod 777 /root/shell/start_srs_edge.sh
 RUN ln -s /root/shell/start_srs.sh /root/start.sh
 RUN ln -s /root/shell/stop.sh /root/stop.sh
+RUN ln -s /root/shell/start_srs_edge.sh /root/start_edge.sh
 
 # Port settings
 EXPOSE 554
