@@ -88,7 +88,6 @@ RUN ln -s /root/shell/stop.sh /root/stop.sh
 RUN ln -s /root/shell/start_srs_edge.sh /root/start_edge.sh
 
 # Port settings
-EXPOSE 80
 EXPOSE 554
 EXPOSE 1935
 EXPOSE 1985
